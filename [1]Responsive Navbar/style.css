@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: auto;
+    height: 80px;
+    background-color: #2f3b3b;
+}
+
+/* stylr for navbar  */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* style for logo  */
+.logo {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* stylr for navlinks in a desktop size */
+.navlinks a {
+    text-decoration: none;
+    margin: 20px;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+/* hover effect in navlinks */
+.navlinks a:hover {
+    color: #c6c3c3;
+}
+
+/* navlink's position and margin */
+.navlinks {
+    margin: 25px 15px;
+    text-align: center;
+}
+
+ul {
+    /* remove bullet points from the list*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    /* display all the options in navbar in a line */
+    display: inline;
+    height: auto;
+    width: auto;
+}
+
+
+.search-container {
+    /* place the search container in the right end */
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+/* style for nav icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    right: 20px;
+    font-size: 2.2rem;
+    margin-top: 14px;
+    color: #fff;
+    background: transparent;
+}
+
+
+/* style for nav icon */
+.search-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 65px;
+    font-size: 1.8rem;
+    margin-top: 22px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    background: transparent;
+}
+
+/*style for the input box */
+input {
+    height: 35px;
+    width: 75;
+    padding: 6px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+/*style for the search button */
+.searchbutton {
+    height: 35px;
+    width: 65px;
+    color: #1E90FF;
+    border: 1px solid #1E90FF;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 6px;
+}
+
+/* hover effect for button */
+.searchbutton:hover {
+    background-color: #1E90FF;
+    color: white;
+}
+
+/* remove the default focus outline */
+input:focus {
+    outline: none;
+}
+
+/* hide the toggling navlinks from desktop size */
+.navlinks2 {
+    display: none;
+}
+
+/* hide the toggling search bar from the desktop size  */
+.search-container2 {
+    display: none;
+}
+
+
+/* ######## */
+.navlinks2 li:hover {
+    background-color: #5f6679;
+    box-shadow: 0 0 5px #5f6679, 0 0 25px #5f6679, 0 0 50px #5f6679, 0 0 200px #5f6679;
+}
+
+
+.navlinks a:hover {
+    color: rgb(255, 255, 255);
+    /* text-decoration: underline; */
+}
+
+
+
+.navlinks:hover li {
+    filter: blur(5px);
+}
+
+.navlinks:hover li:hover {
+    filter: blur(0px);
+}
+
+.navlinks2:hover li {
+    filter: blur(5px);
+}
+
+.navlinks2:hover li:hover {
+    filter: blur(0px);
+}
+
+
+/* .navlinks li a {
+    padding: 5px 0;
+    position: relative;
+} */
+
+.navlinks:hover li a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width .3s;
+
+}
+
+.navlinks:hover li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* ######## */
+
+
+
+/* style for the tab with width of max 810px  */
+@media screen and (max-width: 810px) {
+    .menu-icon {
+        /*hide the menu icon if the tab width reaches below 678px */
+        display: block;
+
+    }
+
+    .navlinks {
+        /*hide the nave links when tab width is below 568px */
+        display: none;
+        flex-direction: column;
+    }
+
+    /* position the search container in the smallest navbar  */
+    .search-container {
+        position: absolute;
+        right: 70px;
+    }
+
+
+    /* style the navlinks in the toggled small size tab  */
+    .show {
+        display: flex;
+        position: absolute;
+        top: 80.9px;
+        right: 1px;
+        width: 250px;
+        background-color: #2f3b3b;
+        border-radius: 7px;
+        text-decoration: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+    }
+
+    /* hover effect in the navlink container  */
+    .show:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .show li {
+        margin: 10px;
+    }
+
+    .show a {
+        /* style for fonts in navlinks */
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .navlinks li {
+        text-align: center;
+        /* Center-align the navigation links */
+        padding: 5px;
+    }
+
+
+    .navlinks2 {
+        flex-direction: column;
+    }
+
+    .navlinks2 li {
+        text-align: center;
+        padding: 5px;
+    }
+
+}
+
+
+/* style for the tab with max 580px width  */
+@media screen and (max-width: 580px) {
+
+
+    .search-icon {
+        display: block;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    /* place the search container in small size navbar  */
+    .show2 {
+        display: flex;
+        position: absolute;
+        right: 125px;
+        width: auto;
+        top: 23px;
+    }
+
+    /* hide search button in smallest tab  */
+    .show2 .searchbutton {
+        display: none;
+    }
+
+}
